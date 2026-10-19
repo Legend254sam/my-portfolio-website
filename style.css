@@ -12,10 +12,8 @@ img{
   height: auto;
   display: block;
 }
-@media screen {
-  
-}
-.root {
+
+:root {
   --primary-color: #ff014f;
   --secondary-color: #1e1e1e;
   --text-color: #fff;
@@ -70,18 +68,18 @@ nav ul a:hover {
 .btn {
   display: inline-block;
   padding: 0.8em 2em;
-  background-color: rgb(34, 147, 179);
-  color: #fff;
+  background: linear-gradient(to right, rgb(196, 8, 221), rgb(15, 59, 116));
+  color: #f1e8ee;
   font-size: 1.1em;
   font-weight: 500;
   border-radius: 0.5em;
   transition: 0.3s ease-in-out;
-  border: 2px solid rgb(52, 52, 219);
+  border: 2px  #292929;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 .btn:hover {
-  background-color: var(--primary-color);
+  background-color: rgb(131, 131, 248);
   color: rgb(0, 110, 255);
 }
 span {
@@ -139,13 +137,17 @@ section {
 #about {
   background-color: var(--second-background);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5em;
+  gap: 2em;
+  padding: 50px 10%;
 }
 
 .about-box {
   display: flex;
+  width: 100%;
+  max-width: 800px;
   flex-direction: column;
   text-align: left;
   gap: 2em;
@@ -155,24 +157,43 @@ section {
 }
 .about-box p {
   color: white;
+  line-height: 1.8;
+  margin-top: 1em;
 }
 .skills {
   display: flex;
   text-align: left;
-  gap: 5em;
+  gap: 1.5em;
   align-items: center;
+  width: 100%;
+}
+.skills h2{
+   text-align: center;
+   font-size: 2em;
+}
+.skills-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .skills ul {
   font-size: 1.3em;
   font-weight: 500;
   display: flex;
-  flex-direction: column;
-  color: white;
-  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  
+  
 }
 .skills ul li span {
   display: flex;
+  background-color: #292929;
+  border-radius: 8px;
+  padding: 12px 25px;
   gap: 0.5em;
+  border: 1px solid #444444;
   font-size: 1.2em;
   transition: 0.3s ease-in-out;
 }
@@ -340,6 +361,323 @@ section {
     padding-bottom: 5px; /* Reduces space inside the bottom of the section */
     margin-top: 50px;        /* Removes space outside the top of the section */
     margin-bottom: 0;     /* Removes space outside the bottom of the section */
+}
+
+/* ==============================
+   TABLETS AND SMALL LAPTOPS
+   Screens up to 1024px
+================================= */
+@media screen and (max-width: 1024px) {
+
+  nav {
+    padding: 1.2em 5%;
+  }
+
+  nav ul {
+    gap: 1.5em;
+  }
+
+  nav ul a {
+    font-size: 1em;
+  }
+
+  section {
+    padding: 80px 5% 30px;
+  }
+
+  #about {
+    gap: 2em;
+  }
+
+  .skills {
+    gap: 2em;
+  }
+
+  .services-container {
+    flex-wrap: wrap;
+  }
+
+  .box {
+    flex: 1 1 280px;
+    padding: 2em;
+  }
+
+  .contact-box {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  footer {
+    gap: 3em;
+    padding: 3em 5%;
+  }
+
+  form input {
+    width: 100%;
+    max-width: 100%;
+    padding: 1em;
+  }
+}
+
+
+/* ==============================
+   TABLETS AND LARGE PHONES
+   Screens up to 768px
+================================= */
+@media screen and (max-width: 768px) {
+
+  nav {
+    padding: 1em 4%;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .logo {
+    font-size: 1.3em;
+  }
+
+  nav ul {
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul a {
+    font-size: 0.9em;
+  }
+
+  section {
+    padding: 90px 5% 30px;
+    min-height: auto;
+  }
+
+  #home {
+    min-height: 100vh;
+    gap: 1.5em;
+  }
+
+  .profile-img {
+    width: 35vw;
+    max-width: 220px;
+    min-width: 120px;
+    margin-top: 1em;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+
+  #about {
+    flex-direction: column;
+    gap: 2em;
+    align-items: stretch;
+  }
+
+  .about-box {
+    text-align: center;
+  }
+
+  .skills {
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+
+  .skills ul {
+    font-size: 1em;
+  }
+
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    flex: 1 1 260px;
+    padding: 1.5em;
+  }
+
+  .box h1 {
+    font-size: 1.5em;
+  }
+
+  .contact-box {
+    width: 100%;
+    margin: 0;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  form {
+    width: 100%;
+    gap: 1.5em;
+  }
+
+  form input {
+    width: 100%;
+    padding: 1em;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 3em 5%;
+  }
+
+  .col-right {
+    width: 100%;
+  }
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+  nav {
+    padding: 1em 4%;
+    gap: 0.8em;
+  }
+
+  .logo {
+    font-size: 1.1em;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    gap: 0.7em 1em;
+  }
+
+  nav ul a {
+    font-size: 0.85em;
+  }
+
+  .btn {
+    padding: 0.7em 1em;
+    font-size: 0.9em;
+  }
+
+  section {
+    padding: 90px 4% 25px;
+  }
+
+  #home {
+    gap: 1.2em;
+  }
+
+  .profile-img {
+    width: 45vw;
+    max-width: 180px;
+  }
+
+  .info-box h1 {
+    font-size: 1.7em;
+  }
+
+  .info-box p {
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+
+  .btn-box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #about {
+    gap: 1.5em;
+  }
+
+  .about-box h1,
+  .header {
+    font-size: 1.6em;
+  }
+
+  .skills {
+    gap: 1.5em;
+    align-items: flex-start;
+  }
+
+  .skills ul {
+    font-size: 0.9em;
+  }
+
+  .services-container {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .box {
+    width: 100%;
+    flex: auto;
+    padding: 1.2em;
+    gap: 1em;
+  }
+
+  .box h1 {
+    font-size: 1.3em;
+  }
+
+  .contact-box {
+    padding: 1em;
+  }
+
+  form input {
+    width: 100%;
+    min-width: 0;
+    padding: 0.9em;
+    font-size: 0.9em;
+  }
+
+  .input-box span {
+    font-size: 1.4em;
+  }
+
+  footer {
+    padding: 2em 5%;
+  }
+
+  .col-right .social-icons i {
+    font-size: 1.5em;
+  }
+}
+
+
+
+@media screen and (max-width: 320px) {
+
+  nav ul {
+    gap: 0.6em;
+  }
+
+  nav ul a {
+    font-size: 0.75em;
+  }
+
+  .info-box h1 {
+    font-size: 1.4em;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-box .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .box {
+    padding: 1em;
+  }
 }
 
 
