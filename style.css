@@ -1,0 +1,347 @@
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+@media screen {
+  
+}
+.root {
+  --primary-color: #ff014f;
+  --secondary-color: #1e1e1e;
+  --text-color: #fff;
+  --bg-color: #000;
+}
+body {
+  background-color: #1e1e1e;
+  color: var(--text-color);
+  min-height: 100vh;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background-color: black;
+  backdrop-filter: blur(10px);
+}
+ul {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+}
+nav ul a {
+  color: white;
+  opacity: 0.8;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+nav ul a:hover {
+  opacity: 1;
+  color: rgb(14, 129, 236);
+}
+.logo {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+  opacity: 0.8;
+}
+.logo:hover {
+  opacity: 1;
+  color: rgb(14, 129, 236);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  background-color: rgb(34, 147, 179);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-radius: 0.5em;
+  transition: 0.3s ease-in-out;
+  border: 2px solid rgb(52, 52, 219);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: var(--primary-color);
+  color: rgb(0, 110, 255);
+}
+span {
+  background: linear-gradient(to right, rgb(196, 8, 221), rgb(15, 59, 116));
+  background-clip: text;
+  color: transparent;
+}
+#menu-icon {
+  display: none;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+section {
+  padding: 15% 15%;
+  min-height: 100vh;
+}
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  color: white;
+}
+.profile-img {
+  width: 18vw;
+  margin-top: 3em;
+  border-radius: 50%;
+}
+.info-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 600px;
+  align-items: center;
+  gap: 1em;
+}
+.btn-box {
+  display: flex;
+  gap: 1em;
+}
+.btn-box .btn:nth-of-type(2) {
+  background-color: white;
+  color: var(--background);
+}
+.btn-box .btn:nth-of-type(2):hover {
+  background-color: var(--background);
+  color: white;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgb(12, 130, 177), rgb(107, 23, 107));
+}
+#about {
+  background-color: var(--second-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+}
+
+.about-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2em;
+}
+.about-box h1 {
+  font-size: 2em;
+}
+.about-box p {
+  color: white;
+}
+.skills {
+  display: flex;
+  text-align: left;
+  gap: 5em;
+  align-items: center;
+}
+.skills ul {
+  font-size: 1.3em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: baseline;
+}
+.skills ul li span {
+  display: flex;
+  gap: 0.5em;
+  font-size: 1.2em;
+  transition: 0.3s ease-in-out;
+}
+.skills ul li:hover {
+  transform: translateX(10px);
+}
+.skills ul li i {
+  font-size: 1.2em;
+}
+#services {
+  background-color: var(--background);
+}
+.services {
+  margin-top: 0.1%;
+}
+
+.header {
+  text-align: center;
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+.services-container {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.box {
+  border: 3px solid rgb(49, 49, 49);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  object-fit: cover;
+  align-items: row;
+  padding: 3em;
+  margin-top: 10px;
+  gap: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.box:hover {
+  border: 3px solid rgb(100, 100, 100);
+}
+.box p {
+  opacity: 0.8;
+}
+.box h1 {
+  font-size: 2em;
+}
+.box img {
+  min-width: 25px;
+  border-radius: 50px;
+}
+#contact {
+  background-color: var(--second-background);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+.contact-box{
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  background: url('contact\ background.jpg');
+   background-repeat: no-repeat;
+  border-radius: 50px;
+  
+}
+form.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1em;
+}
+.input-box span {
+  font-size: 2em;
+}
+form input {
+  font-size: 1em;
+  padding: 1em 5em;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+}
+form input:focus {
+  background: rgb(183, 207, 230);
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10em;
+  bottom: 0;
+  background-color: var(--background);
+  width: 100%;
+  padding: 5em 15%;
+}
+.col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.col-box span i {
+  font-size: 2em;
+}
+.col-box span {
+  font-size: 1em;
+}
+.col-box span i{
+    font-size: 2em;
+    
+}
+.col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: white;
+  max-width: 500px;
+}
+.col-right span {
+  font-size: flex;
+}
+.col-right .social-icons {
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  gap: 1em;
+}
+.col-right .social-icons i {
+  font-size: 2em;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.social-icons i:hover {
+  color: white;
+}
+section {
+    padding-top: 20px;    /* Reduces space inside the top of the section */
+    padding-bottom: 20px; /* Reduces space inside the bottom of the section */
+    margin-top: 0;        /* Removes space outside the top of the section */
+    margin-bottom: 0;     /* Removes space outside the bottom of the section */
+}
+footer {
+    padding-top: 50px;    
+    padding-bottom: 50px; /* Reduces space inside the bottom of the section */
+    margin-top: 0;        /* Removes space outside the top of the section */
+    margin-bottom: 0;
+    background-color: rgb(37, 152, 197);     /* Removes space outside the bottom of the section */
+}
+section {
+    padding-top: 20px;    /* Reduces space inside the top of the section */
+    padding-bottom: 5px; /* Reduces space inside the bottom of the section */
+    margin-top: 50px;        /* Removes space outside the top of the section */
+    margin-bottom: 0;     /* Removes space outside the bottom of the section */
+}
+
+
+
+
